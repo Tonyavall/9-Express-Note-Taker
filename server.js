@@ -4,7 +4,7 @@ const app = express()
 const PORT = process.env.PORT || 3001;
 
 const htmlRoutes = require('./routes/viewRoutes')
-const apiRoutes = require('./routes/api/apiRoutes')
+const api = require('./routes/api/index.js')
 
 const middleware = [
     express.static('public'),
@@ -15,6 +15,6 @@ app.use(middleware)
 
 // All routes
 app.use(htmlRoutes)
-app.use('/api', apiRoutes);
+app.use('/api', api);
 
 app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT})`))
