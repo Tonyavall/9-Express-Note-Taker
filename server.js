@@ -1,3 +1,4 @@
+// Main server file that is run. All respective required() routes are in /routes folder.
 const express = require('express')
 
 const app = express()

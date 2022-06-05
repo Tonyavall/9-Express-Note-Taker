@@ -1,3 +1,4 @@
+// All html routes are handled here.
 const viewRoutes = require('express').Router()
 const path = require('path')
 
