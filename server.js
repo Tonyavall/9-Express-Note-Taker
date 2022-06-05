@@ -8,7 +8,7 @@ const htmlRoutes = require('./routes/viewRoutes')
 const api = require('./routes/api/index.js')
 
 const middleware = [
-    express.static('public'),
+    express.static('docs'),
     express.urlencoded({ extended: true }),
     express.json()
 ]
