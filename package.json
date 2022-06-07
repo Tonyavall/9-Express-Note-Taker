@@ -1,6 +1,12 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
+  "engines": {
+    "name": "example-app",
+    "description": "a really cool app",
+    "version": "1.0.0",
+    "node": "16.x"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
