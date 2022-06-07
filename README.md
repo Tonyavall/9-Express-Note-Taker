@@ -23,3 +23,4 @@ Technologies used includes:
 
 ## Project Notes
 1. Read/Write/Append methods used are inefficient and read entire json 'database'. For future bigger projects and for scability purposes, use data streams and pipelines.
+2. db.json has no auth and the data universally available to everyone. Data resets every 24 hours according to Heroku documentation.
