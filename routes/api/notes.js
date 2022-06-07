@@ -43,16 +43,13 @@ notes.post('/', (req, res) => {
 
 notes.delete('/:id', (req, res) => {
     const id = req.params.id
-    const currentNotes = JSON.parse(fs.readFileSync('./db/db.json', { encoding: 'utf8' }))
+    let currentNotes = JSON.parse(fs.readFileSync('./db/db.json', { encoding: 'utf8' }))
 
-    // Looping over all notes and removing the note with corresponding id
-    for (let i = 0; i < currentNotes.length; i++) {
-        if (currentNotes[i].id === id) {
-            currentNotes.splice(i, 1)
-            fs.writeFileSync('./db/db.json', JSON.stringify(currentNotes))
-            break
-        }
-    }
+    // If id doesn't match the id we want to remove we keep in it the currentNotes array
+    currentNotes = currentNotes.filter(note => note.id !== id)
+
+    // Writing our current array of notes onto db.json and sending our response
+    fs.writeFileSync('./db/db.json', JSON.stringify(currentNotes))
     res.send('Note has been deleted')
 })
 
