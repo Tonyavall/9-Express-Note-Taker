@@ -1,4 +1,4 @@
-# HW-9-Express-NoteTaker
+# 9-Express-NoteTaker
 Take notes with express! A relatively simple 'database' notetaking app.
 
 ## Table of Contents
